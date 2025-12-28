@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Theegutla Venkatesh | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0f172a;
+  --card:#1e293b;
+  --text:#e5e7eb;
+  --primary:#38bdf8;
+}
+.light{
+  --bg:#f8fafc;
+  --card:#e5e7eb;
+  --text:#020617;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);transition:0.3s}
+
+nav{
+  position:fixed;width:100%;background:#020617;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:15px 10%;z-index:1000;
+}
+nav h2{color:var(--primary)}
+nav a{color:#fff;text-decoration:none;margin-left:20px}
+nav a:hover{color:var(--primary)}
+.toggle{cursor:pointer;font-size:20px}
+
+header{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:linear-gradient(135deg,#2563eb,#9333ea);
+  color:#fff;
+}
+header h1{font-size:3rem}
+header span{color:#fde68a}
+.btn{
+  display:inline-block;
+  margin:15px;
+  padding:12px 30px;
+  background:#020617;
+  color:#fff;
+  text-decoration:none;
+  border-radius:30px;
+}
+.btn:hover{transform:scale(1.05)}
+
+section{padding:80px 10%}
+h2{text-align:center;color:var(--primary);margin-bottom:40px}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+.card{
+  background:var(--card);
+  padding:25px;
+  border-radius:15px;
+  transition:0.3s;
+}
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+input,textarea{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:none;
+  border-radius:10px;
+}
+button{
+  padding:12px 30px;
+  border:none;
+  border-radius:30px;
+  background:var(--primary);
+  cursor:pointer;
+}
+
+footer{
+  background:#020617;
+  padding:20px;
+  text-align:center;
+  opacity:0.8;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h2>Venkatesh</h2>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <span class="toggle" onclick="toggleMode()">🌙</span>
+  </div>
+</nav>
+
+<header>
+  <div>
+    <h1>Hello, I'm <span>Theegutla Venkatesh</span></h1>
+    <p>Java Full Stack Developer | Fresher</p>
+    <a href="resume.pdf" class="btn" download>Download Resume</a>
+    <a href="#projects" class="btn">View Projects</a>
+  </div>
+</header>
+
+<section id="about">
+<h2>About Me</h2>
+<div class="card">
+I am a Computer Science graduate (AI & ML) with strong hands-on skills in Java, JDBC, Servlets, JSP, SQL, and Web Development.
+I enjoy building real-world applications and learning modern technologies.
+</div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="grid">
+<div class="card">Java</div>
+<div class="card">JDBC</div>
+<div class="card">Servlets & JSP</div>
+<div class="card">SQL & PostgreSQL</div>
+<div class="card">HTML, CSS, JavaScript</div>
+<div class="card">Git & GitHub</div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="grid">
+
+<div class="card">
+<h3>Low Light Image Enhancement</h3>
+<p>Deep learning-based image enhancement using LIME.</p>
+<a href="#" class="btn">GitHub</a>
+</div>
+
+<div class="card">
+<h3>Breast Cancer Detection</h3>
+<p>SVM-based ML project for early cancer detection.</p>
+<a href="#" class="btn">GitHub</a>
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact Me</h2>
+<div class="card">
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea rows="5" placeholder="Your Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
+</div>
+</section>
+
+<footer>
+© 2025 Theegutla Venkatesh | Java Full Stack Developer
+</footer>
+
+<script>
+function toggleMode(){
+  document.body.classList.toggle("light");
+}
+</script>
+
+</body>
+</html>
